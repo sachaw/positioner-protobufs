@@ -2,9 +2,9 @@
 name = "positioner_protobufs"
 edition = "2021"
 version = "__PACKAGE_VERSION__"
+description = "Positioner Protobuf definitions"
 license-file = "LICENSE"
 include = ["**/*.rs", "Cargo.toml"]
-
 [dependencies]
 prost = "0.13.3"
 prost-types = "0.13.3"
