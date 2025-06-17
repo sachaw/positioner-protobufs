@@ -1,0 +1,4 @@
+version: v2
+modules:
+  - path: positioner
+    name: buf.build/positioner/protobufs

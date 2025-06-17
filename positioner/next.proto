@@ -1,0 +1,49 @@
+syntax = "proto3";
+package positioner;
+
+import "google/protobuf/timestamp.proto";
+
+message PositionerCharacteristics {
+    message Bounds {
+        double min = 1;
+        double max = 2;
+    }
+    repeated Bounds limits = 1;
+}
+
+message GpsPosition {
+    double latitude = 1;
+    double longitude = 2;
+    double altitude = 3;
+}
+
+message Heading {
+    double angle = 1;
+    double speed = 2;
+}
+
+message AxisMeasurement {
+    double azimuth = 1;
+    double elevation = 2;
+    double auxiliary = 3;
+}
+
+message BeaconMagnitude {
+    double magnitude = 1;
+}
+
+message BeaconFFT {
+    repeated double offset = 1;
+    repeated double magnitude = 2;
+}
+
+
+//streams:
+// - Position
+// - reference frame
+// - - earth
+// - - - attitude
+// - - - velocity
+// - - pedestal
+// - - - attitude
+// - - - velocity
